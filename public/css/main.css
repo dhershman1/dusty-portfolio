@@ -1,0 +1,289 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --jet: hsl(120, 1%, 17%);
+  --accent: hsl(0, 100%, 69%);
+  --shadow: hsla(0, 0%, 0%, 0.13);
+  --lightgrey: hsl(60, 3%, 93%);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--lightgrey);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* General Helpers */
+
+.hide {
+  display: none;
+}
+
+/* Some Color Overwrites */
+
+.white-txt {
+  color: var(--white);
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+/* Grid Setup */
+
+.grid {
+  display: grid;
+  grid-template-areas: 'header'
+                       'main'
+                       'footer';
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  padding: 2rem;
+}
+
+footer {
+  grid-area: footer;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+/* Links */
+a.link {
+  transition: all 0.2s ease-in-out;
+  color: var(--accent);
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+a.link:hover {
+  color: var(--jet);
+  text-shadow: 1px 1px 2px var(--shadow);
+}
+
+/* flash alert styles */
+
+.flash-container {
+  width: 100%;
+  position: fixed;
+  z-index: 700;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.alert {
+  text-align: center;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--jet);
+}
+
+/* nav bar */
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: var(--jet);
+  opacity: .8;
+}
+
+header .brand {
+  font-size: 24px;
+  padding: 1rem;
+  width: 30%;
+}
+
+header .brand a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.navbar {
+  text-align: center;
+  transition: transform 400ms ease-in-out;
+}
+
+.navbar__full {
+  width: 100%;
+  display: flex;
+}
+
+.navbar__full .navbar {
+  width: 100%;
+}
+
+.navbar__mobile {
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  transition: transform 400ms ease-in-out;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+.brand--sm-view {
+  display: none;
+}
+
+.navbar__mobile {
+  display: none;
+}
+
+.navbar ul,
+.navbar__mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul {
+  justify-content: flex-end;
+}
+
+.navbar__links {
+  display: flex;
+  font-size: 20px;
+  height: 100%;
+}
+
+.navbar__mobile a {
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  color: var(--white);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.navbar__links li {
+  display: flex;
+  align-content: center;
+}
+
+.navbar__mobile li {
+  display: block;
+  text-align: center;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  color: var(--white);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar__links a:hover {
+  background-color: var(--white);
+  color: var(--jet);
+}
+
+.nav-toggle:checked~.navbar__mobile {
+  transform: scale(1);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.toggle-label {
+  display: none;
+  justify-self: end;
+  align-self: center;
+  padding: 0.5rem;
+}
+
+.toggle-label span,
+.toggle-label span::before,
+.toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2rem;
+  position: relative;
+}
+
+.toggle-label span::before {
+  bottom: .4rem;
+  content: '';
+  position: absolute;
+}
+
+.toggle-label span::after {
+  top: .4rem;
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media only screen and (max-width: 768px) {
+  .brand {
+    width: 100%;
+  }
+
+  .brand--sm-view {
+    display: flex;
+    width: 100%;
+  }
+
+  .brand--lg-view {
+    display: none;
+  }
+
+  .toggle-label {
+    display: inline;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 3.5rem;
+  }
+
+  .navbar__mobile ul {
+    display: flex;
+    background-color: var(--jet);
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar__mobile ul li {
+    font-size: 20px;
+    padding: 0.5rem;
+  }
+}
