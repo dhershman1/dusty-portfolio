@@ -8,7 +8,6 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
   height: 100vh;
   margin: 0;
   background-color: var(--lightgrey);
@@ -25,6 +24,10 @@ a {
 h1 {
   color: var(--accent);
   font-weight: bold;
+}
+
+p {
+  font-size: 14px;
 }
 
 /* General Helpers */
@@ -98,6 +101,12 @@ a.link:hover {
   color: var(--jet);
 }
 
+/* Type Text Styles */
+.type-text::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
 /* nav bar */
 
 header {
@@ -140,10 +149,6 @@ header .brand a {
   transition: transform 400ms ease-in-out;
   transform: scale(1, 0);
   transform-origin: top;
-}
-
-.brand--sm-view {
-  display: none;
 }
 
 .navbar__mobile {
@@ -241,18 +246,21 @@ header .brand a {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .brand {
     width: 100%;
-  }
-
-  .brand--sm-view {
-    display: flex;
-    width: 100%;
-  }
-
-  .brand--lg-view {
-    display: none;
   }
 
   .toggle-label {
