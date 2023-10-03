@@ -24,16 +24,22 @@ a {
 h1 {
   color: var(--accent);
   font-weight: bold;
+  margin: 0;
 }
 
 p {
   font-size: 14px;
+  margin: 0;
 }
 
 /* General Helpers */
 
 .hide {
   display: none;
+}
+
+.primary-name {
+  font-size: 36px;
 }
 
 /* Some Color Overwrites */
@@ -53,10 +59,13 @@ p {
   grid-template-areas: 'header'
                        'main'
                        'footer';
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
 }
 
 header {
   grid-area: header;
+  align-self: flex-start;
 }
 
 main {
@@ -105,6 +114,15 @@ a.link:hover {
 .type-text::after {
   content: "|";
   animation: blink 1s infinite;
+}
+
+.type-text {
+  font-size: 20px;
+}
+
+.main-text {
+  text-align: center;
+  height: 100%;
 }
 
 /* nav bar */
