@@ -414,4 +414,8 @@ header .brand a {
     font-size: 20px;
     padding: 0.5rem;
   }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
