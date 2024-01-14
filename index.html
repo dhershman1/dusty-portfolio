@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">☺
     <link href="public/css/main.css" rel="stylesheet">
     <title>Dusty Codes</title>
   </head>
@@ -22,13 +23,13 @@
           <nav class="navbar">
             <ul class="navbar__links">
               <li>
-                <a href="/about">ABOUT</a>
+                <a href="#about">ABOUT</a>
               </li>
               <li>
-                <a href="/portfolio">PORTFOLIO</a>
+                <a href="#portfolio">PORTFOLIO</a>
               </li>
               <li>
-                <a href="/resume">RESUME</a>
+                <a href="#skills">SKILLS</a>
               </li>
             </ul>
           </nav>
@@ -40,13 +41,13 @@
         <nav class="navbar__mobile">
           <ul>
             <li>
-              <a href="/about">ABOUT</a>
+              <a href="#about">ABOUT</a>
             </li>
             <li>
-              <a href="/portfolio">PORTFOLIO</a>
+              <a href="#portfolio">PORTFOLIO</a>
             </li>
             <li>
-              <a href="/resume">RESUME</a>
+              <a href="#skills">SKILLS</a>
             </li>
           </ul>
         </nav>
@@ -57,11 +58,49 @@
             <h1 class="primary-name">Dustin Hershman</h1>
             <p class="type-text" id="typeText"></p>
           </section>
+          <section class="main-text" id="about">
+            <h2>About</h2>
+            <p>Hello, my name is Dustin Hershman and welcome to my personal site!</p>
+            <p>I'm a Functional Developer at heart, and my most used toolset/language is JavaScript. I've authored many cool and fun libraries for the language!</p>
+          </section>
+          <section class="main-text" id="portfolio">
+            <h2>Portfolio</h2>
+          </section>
+          <section class="main-text" id="skills">
+            <h2>Skills</h2>
+            <div class="card-container">
+              <div class="card">
+                <div class="card__actions">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                    <i class="material-icons">launch</i>
+                  </a>
+                </div>
+                <div class="card__title card__main">
+                  HTML
+                  <div class="progress-circle professional">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                        stroke-dasharray="125.664" stroke-dashoffset="0" class="progress-circle__underlay"></circle>
+                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                        stroke-dasharray="125.664" stroke-dashoffset="25.132741228718345px" class="progress-circle__overlay"></circle>
+                    </svg>
+                    <div class="progress-circle__info">
+                      Professional
+                    </div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  HTML RULEZ D00D
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
       <footer>
         <p>
-          Made with ❤️ by<a class="link" href="https://github.com/dhershman1" target="_blank">Dustin Hershman</a>© 2023
+          Made with ❤️ by<a class="link" href="https://github.com/dhershman1" target="_blank">Dustin Hershman</a>© 2024
         </p>
       </footer>
     </div>
