@@ -64,20 +64,20 @@ function loadSkills () {
   const skills = [
     {
       name: "HTML",
-      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       img: "html.png",
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       level: "professional"
     },
     {
       name: 'JavaScript',
       img: 'js.jpg',
-      level: 'expert',
-      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      level: 'expert'
     },
     {
       name: "CSS",
-      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       img: "css.jpg",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       level: "intermediate"
     }
   ]
