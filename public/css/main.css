@@ -170,6 +170,11 @@ p.type-text {
   z-index: 0;
 }
 
+.novice {
+  color: rgb(43, 89, 148);
+  caret-color: rgb(43, 89, 148);
+}
+
 .intermediate {
   color: rgb(255, 193, 7);
   caret-color: rgb(255, 193, 7);
@@ -215,10 +220,15 @@ p.type-text {
   padding-top: 0;
 }
 
+.card__main img {
+  max-width: 100px;
+}
+
 .card__title {
   align-items: center;
-  display: flex;
-  flex-wrap: warp;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   padding: 1rem;
 }
 

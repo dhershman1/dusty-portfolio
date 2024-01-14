@@ -44,7 +44,7 @@ function getHash (url) {
  * A function that shows and hides content based on the current hash string
  * @param {String} hash A hash string we want to show the content of
  */
-function showContent (hash) {
+function toggleContent (hash) {
   let useHash = hash
 
   if (!allowedHashes.has(hash)) {
@@ -58,18 +58,56 @@ function showContent (hash) {
       sections[k].classList.add('hide')
     }
   })
+}
 
+function loadSkills () {
+  const skills = [
+    {
+      name: "HTML",
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      img: "html.png",
+      level: "professional"
+    },
+    {
+      name: 'JavaScript',
+      img: 'js.jpg',
+      level: 'expert',
+      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+    },
+    {
+      name: "CSS",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      img: "css.jpg",
+      level: "intermediate"
+    }
+  ]
+  const card = document.createElement('div')
+  card.classList.add('card')
+
+  skills.forEach(skill => {
+    const cardActions = document.createElement('div')
+    cardActions.classList.add('card__actions')
+    const link = document.createElement('a')
+    link.setAttribute('href', skill.link)
+    link.setAttribute('target', '_blank')
+    const icon = document.createElement('i')
+    icon.classList.add('material-icons')
+    icon.appendChild(document.createTextNode('launch'))
+    link.appendChild(icon)
+    cardActions.appendChild(link)
+
+  })
 }
 
 window.onload = () => {
   typeAnimation()
   addEventListener('hashchange', event => {
-    showContent(getHash(event.newURL))
+    toggleContent(getHash(event.newURL))
   })
 
   if (!window.location.hash) {
     window.location.hash = 'about'
   }
 
-  showContent(window.location.hash.substring(1))
+  toggleContent(window.location.hash.substring(1))
 }

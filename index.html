@@ -58,17 +58,17 @@
             <h1 class="primary-name">Dustin Hershman</h1>
             <p class="type-text" id="typeText"></p>
           </section>
-          <section class="main-text" id="about">
+          <section class="main-text hide" id="about">
             <h2>About</h2>
             <p>Hello, my name is Dustin Hershman and welcome to my personal site!</p>
             <p>I'm a Functional Developer at heart, and my most used toolset/language is JavaScript. I've authored many cool and fun libraries for the language!</p>
           </section>
-          <section class="main-text" id="portfolio">
+          <section class="main-text hide" id="portfolio">
             <h2>Portfolio</h2>
           </section>
-          <section class="main-text" id="skills">
+          <section class="main-text hide" id="skills">
             <h2>Skills</h2>
-            <div class="card-container">
+            <div id="cards" class="card-container">
               <div class="card">
                 <div class="card__actions">
                   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
@@ -76,13 +76,15 @@
                   </a>
                 </div>
                 <div class="card__title card__main">
-                  HTML
+                  <div>
+                    <img alt="HTML" src="public/imgs/html.png" />
+                  </div>
                   <div class="progress-circle professional">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                      viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444" style="transform: rotate(0deg);">
-                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                      viewBox="22.2 22.2 44.4 44.4" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45"
                         stroke-dasharray="125.664" stroke-dashoffset="0" class="progress-circle__underlay"></circle>
-                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45"
                         stroke-dasharray="125.664" stroke-dashoffset="25.132741228718345px" class="progress-circle__overlay"></circle>
                     </svg>
                     <div class="progress-circle__info">
@@ -91,7 +93,7 @@
                   </div>
                 </div>
                 <div class="card__text">
-                  HTML RULEZ D00D
+                  <h3>HTML</h3>
                 </div>
               </div>
               <div class="card">
@@ -101,7 +103,9 @@
                   </a>
                 </div>
                 <div class="card__title card__main">
-                  JavaScript
+                  <div>
+                    <img alt="JavaScript" src="public/imgs/js.jpg" />
+                  </div>
                   <div class="progress-circle expert">
                     <svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444"
@@ -117,7 +121,7 @@
                   </div>
                 </div>
                 <div class="card__text">
-                  JS Rulez too
+                  <h3>JavaScript</h3>
                 </div>
               </div>
               <div class="card">
@@ -127,14 +131,16 @@
                   </a>
                 </div>
                 <div class="card__title card__main">
-                  CSS
+                  <div>
+                    <img alt="CSS" src="public/imgs/css.jpg" />
+                  </div>
                   <div class="progress-circle professional">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                      viewBox="22.22222222222222 22.22222222222222 44.44444444444444 44.44444444444444"
+                      viewBox="22.2 22.2 44.4 44.4"
                       style="transform: rotate(0deg);">
-                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45"
                         stroke-dasharray="125.664" stroke-dashoffset="0" class="progress-circle__underlay"></circle>
-                      <circle fill="transparent" cx="44.44444444444444" cy="44.44444444444444" r="20" stroke-width="4.444444444444445"
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45"
                         stroke-dasharray="125.664" stroke-dashoffset="25.132741228718345px" class="progress-circle__overlay"></circle>
                     </svg>
                     <div class="progress-circle__info">
@@ -143,7 +149,111 @@
                   </div>
                 </div>
                 <div class="card__text">
-                  CSS is fun now
+                  <h3>CSS</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__actions">
+                  <a href="https://nodejs.org/" target="_blank">
+                    <i class="material-icons">launch</i>
+                  </a>
+                </div>
+                <div class="card__title card__main">
+                  <div>
+                    <img alt="Node.js" src="public/imgs/node.png" />
+                  </div>
+                  <div class="progress-circle professional">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="22.2 22.2 44.4 44.4" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="0" class="progress-circle__underlay"></circle>
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="25.132741228718345px" class="progress-circle__overlay"></circle>
+                    </svg>
+                    <div class="progress-circle__info">
+                      Professional
+                    </div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <h3>Node.js</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__actions">
+                  <a href="http://elm-lang.org/" target="_blank">
+                    <i class="material-icons">launch</i>
+                  </a>
+                </div>
+                <div class="card__title card__main">
+                  <div>
+                    <img alt="Elm" src="public/imgs/elm.png" />
+                  </div>
+                  <div class="progress-circle intermediate">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="22.2 22.2 44.4 44.4" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="0" class="progress-circle__underlay"></circle>
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="50px" class="progress-circle__overlay"></circle>
+                    </svg>
+                    <div class="progress-circle__info">
+                      Intermediate
+                    </div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <h3>Elm</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__actions">
+                  <a href="https://www.python.org" target="_blank">
+                    <i class="material-icons">launch</i>
+                  </a>
+                </div>
+                <div class="card__title card__main">
+                  <div>
+                    <img alt="Python" src="public/imgs/python.png" />
+                  </div>
+                  <div class="progress-circle intermediate">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="22.2 22.2 44.4 44.4" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="0" class="progress-circle__underlay"></circle>
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="50px" class="progress-circle__overlay"></circle>
+                    </svg>
+                    <div class="progress-circle__info">
+                      Intermediate
+                    </div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <h3>Python</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__actions">
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">
+                    <i class="material-icons">launch</i>
+                  </a>
+                </div>
+                <div class="card__title card__main">
+                  <div>
+                    <img alt="JSON" src="public/imgs/json.png" />
+                  </div>
+                  <div class="progress-circle expert">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="22.2 22.2 44.4 44.4" style="transform: rotate(0deg);">
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="0" class="progress-circle__underlay"></circle>
+                      <circle fill="transparent" cx="44.4" cy="44.4" r="20" stroke-width="4.45" stroke-dasharray="125.664"
+                        stroke-dashoffset="0" class="progress-circle__overlay"></circle>
+                    </svg>
+                    <div class="progress-circle__info">
+                      Expert
+                    </div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <h3>JSON</h3>
                 </div>
               </div>
             </div>
